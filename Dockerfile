@@ -12,8 +12,7 @@ WORKDIR /app
 # CHẠY TẤT CẢ CÁC BƯỚC CHUẨN BỊ Ở ĐÂY (RUN)
 # Bao gồm: Cập nhật OS -> Cài Git -> Clone Code -> Cài Thư viện -> Dọn dẹp
 # ==============================================================================
-RUN apt-get update && \
-    apt-get install -y git && 
+RUN apt update && apt install git -y
 RUN git clone https://github.com/mamaduck0011-dotcom/mcp.git && cd mcp && python3 app.py
 
 # 4. Chuyển thư mục làm việc vào trong thư mục code đã clone
